@@ -11,7 +11,7 @@ func IterativeFactorial(nb int) int {
 			res = res * i
 		}
 
-		if res >= 2147483647 {
+		if res >= 2147483647 || res < 0 {
 			return 0
 		}
 	}
