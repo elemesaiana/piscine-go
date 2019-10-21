@@ -4,7 +4,6 @@ func IterativeFactorial(nb int) int {
 	var res int
 	res = 1
 	for i := 0; i < nb+1; i++ {
-
 		if i == 0 || i == 1 {
 			res = 1
 		} else if res >= 2147483647 {
@@ -12,10 +11,10 @@ func IterativeFactorial(nb int) int {
 
 		} else {
 
-			res = res * (i)
+			res = res * (i - 1)
 
 		}
 
 	}
-	return res
+	return 0
 }
