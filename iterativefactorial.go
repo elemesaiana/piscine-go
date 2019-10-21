@@ -1,10 +1,12 @@
-package piscine
+package main
+
+import "fmt"
 
 func IterativeFactorial(nb int) int {
-	res := 1
-
+	var res int
+	res = 1
 	for i := 0; i < nb+1; i++ {
-		if nb < 18 || nb > 0 {
+		if i < 0 || i > 18 {
 			res = 0
 		} else if i == 0 || i == 1 {
 			res = 1
@@ -16,4 +18,9 @@ func IterativeFactorial(nb int) int {
 
 	}
 	return res
+}
+
+func main() {
+	arg := 5
+	fmt.Println(IterativeFactorial(arg))
 }
