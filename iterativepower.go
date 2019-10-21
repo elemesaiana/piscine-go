@@ -9,7 +9,7 @@ func IterativePower(nb int, power int) int {
 			res = res * nb
 		}
 	} else {
-		res = 1
+		res = 0
 	}
 
 	return res
