@@ -3,17 +3,17 @@ package piscine
 func IterativeFactorial(nb int) int {
 	var res int
 	res = 1
-	for i := 0; i < nb+1; i++ {
-		if i == 0 || i == 1 {
-			res = 1
+	if nb == 0 {
+		return 1
+	} else if nb > 0 && nb < 18 {
+		for i := 1; i < nb+1; i++ {
 
-		} else {
 			res = res * i
+
 		}
 
-		if res >= 2147483647 || res < 0 {
-			return 0
-		}
+	} else {
+		res = 0
 	}
 	return res
 }
