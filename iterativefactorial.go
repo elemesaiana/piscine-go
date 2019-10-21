@@ -2,8 +2,9 @@ package piscine
 
 func IterativeFactorial(nb int) int {
 	res := 1
+
 	for i := 0; i < nb+1; i++ {
-		if i < 0 || i > 18 {
+		if nb < 18 || nb > 0 {
 			res = 0
 		} else if i == 0 || i == 1 {
 			res = 1
