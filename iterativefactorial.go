@@ -11,7 +11,7 @@ func IterativeFactorial(nb int) int {
 
 		} else {
 
-			res = res * (i - 1)
+			res = res * i
 
 		}
 
