@@ -1,6 +1,4 @@
-package main
-
-import "github.com/01-edu/z01"
+package piscine
 
 func LastRune(s string) rune {
 	v := ' '
@@ -20,11 +18,4 @@ func LastRune(s string) rune {
 	}
 	return v
 
-}
-
-func main() {
-	z01.PrintRune(LastRune("Hello!"))
-	z01.PrintRune(LastRune("Salut!"))
-	z01.PrintRune(LastRune("Ola!"))
-	z01.PrintRune('\n')
 }
