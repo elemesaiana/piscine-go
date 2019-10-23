@@ -4,7 +4,7 @@ func FirstRune(s string) rune {
 	v := ' '
 	for i, v := range s {
 
-		if v >= 0 && v <= 127 && i == 0 {
+		if (v >= 65 && v <= 90 && i == 0) || (v >= 97 && v <= 122 && i == 0) {
 			return v
 
 		}
