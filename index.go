@@ -1,22 +1,30 @@
-package piscine
+package main
+
+import "fmt"
 
 func Index(s string, toFind string) int {
-	a := []rune(s)
-	b := []rune(toFind)
-	c := 0
 
-	for range b {
+	c := 0
+	k := 0
+	index := -1
+
+	for range s {
 		c++
 	}
-	if c != 0 {
-		for index, str := range a {
-			if c > 0 && str == b[0] {
-				return index
-
-			}
-		}
-	} else if c == 0 {
-		return 0
+	for range toFind {
+		k++
 	}
-	return -1
+	for i := 0; i <= c-k; i++ {
+		if s[i:i+k] == toFind {
+			index = i
+			break
+		}
+	}
+
+	return index
+}
+func main() {
+	fmt.Println(Index("Hello!", "l"))
+	fmt.Println(Index("Salut!", "alu"))
+	fmt.Println(Index("Ola!", "hOl"))
 }
