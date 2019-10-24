@@ -8,11 +8,14 @@ func Index(s string, toFind string) int {
 	for range b {
 		c++
 	}
-	for index, str := range a {
-		if c > 0 && str == b[0] {
-			return index
+	if c != 0 {
+		for index, str := range a {
+			if c > 0 && str == b[0] {
+				return index
 
+			}
 		}
 	}
+
 	return -1
 }
